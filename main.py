@@ -82,7 +82,7 @@ class FileSearchExtension(Extension):
         terminal_emulator = self.preferences['terminal_emulator']
 
         # some terminals might work differently. This is already prepared for that.
-        if terminal_emulator in ['gnome-terminal', 'terminator', 'tilix', 'xfce-terminal']:
+        if terminal_emulator in ['gnome-terminal', 'terminator', 'tilix', 'xfce-terminal', 'konsole']:
             return RunScriptAction(terminal_emulator, ['--working-directory', path])
 
         return DoNothingAction()
